@@ -23,7 +23,7 @@
 .white {
     outline: 12px solid rgb(75, 152, 224);
     outline-offset: -15px;
-    border: black 4px solid;
+    border: black 5px solid;
 }
 .clear {
     background-color: rgb(230, 86, 86);
@@ -53,6 +53,9 @@
     width: 125%;
     display: inline-block;
     background-color:#a19292;
+}
+#contents {
+    margin-right: 12px;
 }
 img {
     width: 15%;
