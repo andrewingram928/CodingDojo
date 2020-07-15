@@ -1,0 +1,118 @@
+
+.wrapper {
+    width: 1025px;
+    height: 950px;
+    background-color: #DDDFD4;
+    margin: auto;
+    padding: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.header {
+    width: 100%;
+    background-color: #38B0AD;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+}
+.header img {
+    width: 50px;
+    display: inline-block;
+    margin: 0;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+.header h1 {
+    font-size: 35px;
+    display: inline-block;
+    margin:0;
+    margin-right: 65px;
+    vertical-align: middle;
+}
+.header a {
+    color: white;
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 7px;
+}
+.content {
+    width: 96%;
+    height: 715px;
+    background-color:#FBE691;
+    padding: 20px;
+    color: #A2AFA9;
+}
+.content p {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 600;
+}
+.content a {
+    text-decoration: none;
+    color: #38B0AD;
+}
+.sidebar {
+    width: 250px;
+    height: 700px;
+    background-color:  #153F43;
+    padding: 5px;
+    display: inline-block;
+}
+.sidebar h2 {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.small {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #153F43;
+    height: 200px;
+    width: 190px;
+    margin-left: 40px;
+}
+.top3 {
+    display: inline-block;
+    vertical-align: top;
+}
+.top3 h2 , .middle2 h2 , .large1 h2 {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 7px;
+    margin-bottom: 5px;
+}
+.top3 p , .middle2 p , .large1 p{
+    margin-top: 15px;
+}
+.medium {
+    width: 317px;
+    height: 205px;
+    background-color: #153F43;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+}
+.middle2 {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 725px;
+    top: 380px;
+}
+.large1 {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #153F43;
+    width: 665px;
+    height: 217px;
+    position: absolute;
+    right: 725px;
+    top: 630px;
+}
+.footer {
+    height: 75px;
+    width: 100%;
+    background-color: #38B0AD;
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 10px;
+}
+
