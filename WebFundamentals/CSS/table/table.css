@@ -1,0 +1,110 @@
+html, body, div, form, fieldset, legend, label
+{
+ margin: 0;
+ padding: 0; 
+}
+table
+{
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+th, td
+{
+ text-align: left;
+ vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+img { border: 0; }
+
+.wrapper {
+    width: 1125px;
+    height: 750px;
+    background-color: #EEEEEE;
+    margin: auto;
+    padding: 20px;
+}
+.elementb, .elementr, .elementgo, .elementgr{
+    font-size: 17px;
+    margin: 0;
+    color: #19139F;
+}
+.elementb , .elementr , .elementgo , .elementgr {
+    font-size: 13px;
+    color: #19139F;
+}
+p , h1{
+    margin: 0;
+    vertical-align: middle;
+}
+.elementb , .elementr , .elementgo , .elementgr , .clear {
+    height: 60px;
+    width: 55px;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.clear2 {
+    height: 30px;
+    width: 55px;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+/* .elementgr {
+    height: 60px;
+    width: 55px;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+} */
+.text1 {
+    height: 60px;
+    width: 55px;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    padding-top: 0px;
+    vertical-align: text-bottom;
+}
+.text2 {
+    height: 27px;
+    width: 89px;
+    text-align: center;
+    margin: 0px 25px 5px 0px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    padding-top: 0px;
+    vertical-align: text-bottom;
+}
+.text1 p {
+    padding-top: 25px;
+}
+.text2 p {
+    padding-top: 25px;
+    display: inline-block;
+}
+.elementb {
+    background-color: #689BFF;
+}
+.elementgo {
+    background-color:#FECB00 ;
+}
+.elementr {
+    background-color: #FD9A98;
+}
+.elementgr {
+    background-color: #1FCA21;
+}
