@@ -1,0 +1,27 @@
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: blue;
+}
+.triangle {
+    border-left: 100px solid transparent;
+    border-bottom: 200px solid  blue;
+    border-right: 100px solid transparent ;
+    width: 0px;
+    height: 0px;
+}
+.pacman {
+    width: 75px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: blue;
+	border-top: 75px solid transparent;
+	border-right: 75px solid white;
+	border-bottom: 75px solid transparent;
+}

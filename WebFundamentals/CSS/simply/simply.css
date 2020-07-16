@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.wrapper {
+    width: 75%;
+    margin: auto;
+    padding: 1%;
+    max-width: 800px;
+    height: 900px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0em 1em 1em;
+}  
+.header {
+    width: 100%;
+    height: 100px;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+.content {
+    width: 100%;
+    padding: 2%;
+    margin-top: 1%;
+}
+.col {
+    width: 100%;
+    margin-top: 1%;
+    padding: 1%;
+}
+@media only screen and (max-width: 480px) {
+    .sm0 {
+        display: none;
+    }
+    .header {
+        background-color: crimson;
+    }
+    .content {
+        background-color: crimson;
+    }
+    .col {
+        background-color: crimson;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .med0 {
+        display: none;
+    }
+    .header {
+        background-color: darkmagenta;
+    }
+    .content {
+        background-color: darkmagenta;
+    }
+    .col {
+        background-color: darkmagenta;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .lrg0 {
+        display: none;
+    }
+    .header {
+        background-color: darkorange;
+    }
+    .content {
+        background-color: darkorange;
+    }
+    .col {
+        background-color: darkorange;
+    }
+}
