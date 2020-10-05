@@ -1,13 +1,13 @@
 import random
-def randInt(min= 0, max= 0):
-    if min == 0 and max == 0:
-        num = random.random() * 100
+def randInt(min= 0, max= 100):
+    if min == 0 and max == 100:
+        num = random.random() * max
         return num
     elif min == 0:
         num = random.random() * max
         return num
-    elif max == 0:
-        num = random.random() * (100-min) + min
+    elif max == 100:
+        num = random.random() * (max-min) + min
         return num
     elif min > 0 and max > 0:
         if min > max:
