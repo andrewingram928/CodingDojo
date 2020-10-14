@@ -1,24 +1,10 @@
 class User:
     def __init__(self, name):
         self.name = name
-        self.checkings = BankAccount(int_rate = 1.02 , balance = 0)
-        self.savings = SavingsAccount(int_rate = 1.03, balance= 0)
+        self.checkings = checkings(int_rate = 1.02 , balance = 0)
+        self.savings = savings(int_rate = 1.03, balance= 0)
 
-    def transfer_money(self, other_user, amount, account):
-        if account == "savings":
-            self.savings.balance -= amount
-            other_user.checkings.balance += amount
-            other_user.checkings.display_account_info()
-            self.savings.display_account_info()
-            return self
-        else:
-            self.checkings.balance -= amount
-            other_user.checkings.balance += amount
-            other_user.checkings.display_account_info()
-            self.checkings.display_account_info()
-            return self
-
-class BankAccount:
+class checkings:
     def __init__(self, int_rate = 1.02 , balance = 0):
         self.int_rate = int_rate
         self.balance = balance
@@ -44,7 +30,14 @@ class BankAccount:
             self.balance = self.balance * self.int_rate
             return self
 
-class SavingsAccount:
+    def transfer_money(self, other_user, amount):
+        self.balance -= amount
+        other_user.checkings.balance += amount
+        other_user.checkings.display_account_info()
+        self.display_account_info()
+        return self
+
+class savings:
     def __init__(self, int_rate = 1.03 , balance = 0):
         self.int_rate = int_rate
         self.balance = balance
@@ -70,8 +63,17 @@ class SavingsAccount:
             self.balance = self.balance * self.int_rate
             return self
 
+    def transfer_money(self, other_user, amount):
+        self.balance -= amount
+        other_user.checkings.balance += amount
+        other_user.checkings.display_account_info()
+        self.display_account_info()
+        return self
+
 guido = User("Guido")
 monty = User("Monty")
 andrew = User("Andrew")
 
-andrew.savings.display_account_info()
+andrew.savings.display_account_info().deposit(100).deposit(1000).transfer_money(guido, 500)
+
+andrew.checkings.display_account_info()
