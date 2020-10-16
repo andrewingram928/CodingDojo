@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dojo Survey</h1>
+        <form action="/assign" method="post">
+            {% csrf_token %}
+            <p>Your Name: <input name="name" type="text" class="input_box"></p>
+            <label for="location">Dojo Location: </label>
+                <select name="location" class="loc_box">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Oakland">Oakland</option>
+                    <option value="Arlington">Arlington</option>
+                    <option value="Bellevue">Bellevue</option>
+                    <option value="Boise">Boise</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="LA">LA</option>
+                    <option value="OC">OC</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Online">Online</option>
+                </select>
+            <br>
+            <br>
+            <label for="language">Favorite Language: </label>
+                <select name="language">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="C++">C++</option>
+                </select>
+            <p>Comments (optional): </p>
+            <textarea name="comment"> </textarea>
+            <input type="submit">
+        </form>
+
+    </div>
+</body>
+</html>
