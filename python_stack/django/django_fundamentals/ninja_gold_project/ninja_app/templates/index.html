@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% load static %}
+</head>
+<body>
+    <div id="container">
+        <h2>Your gold:   </h2> <h2 class="gold">{{ request.session.gold }}</h2>
+        <h4>Ninja Gold</h4>
+        <div class="box">
+            <div class="earn_box">
+                <h1>Farm</h1>
+                <h3>Earns 10-20 gold</h3>
+                <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="farm">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class="earn_box">
+                <h1>Cave</h1>
+                <h3>Earns 5-10 gold</h3>
+                <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="cave">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class="earn_box">
+                <h1>House</h1>
+                <h3>Earns 2-5 gold</h3>
+                <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="house">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class="earn_box">
+                <h1>Casino</h1>
+                <h3>Wins -50 to 50</h3>
+                <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="casino">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+        </div>
+        <div class="rules">
+            <h1>Custom Rules:</h1>
+            <form action="/define_rules" method="post">
+                {% csrf_token %}
+                <p>How much gold to win?<input type="number" name="gold_goal"></p>
+                <p>How many turns?<input type="number" name="turn_limit"></p>
+                <input type="submit" name= "rules" value= "Generate Rules">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
