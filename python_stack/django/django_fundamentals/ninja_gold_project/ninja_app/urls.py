@@ -5,4 +5,5 @@ urlpatterns = [
     path('process_money', views.process),
     path('define_rules', views.rules),
     path('game_complete', views.complete),
+    path('reset', views.reset),
 ]

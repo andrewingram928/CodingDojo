@@ -11,6 +11,7 @@
 <body>
     <div id="container">
         <h2>Your gold:   </h2> <h2 class="gold">{{ request.session.gold }}</h2>
+        <h2>Turn Count:   </h2> <h2 class="gold">{{ request.session.count }}</h2>
         <h4>Ninja Gold</h4>
         <div class="box">
             <div class="earn_box">
@@ -50,6 +51,9 @@
                 </form>
             </div>
         </div>
+        {% if request.session.gold_goal and request.session.turn_limit != None %}
+        <h4 id="generated">How to win: Reach {{ request.session.gold_goal }} gold, or {{ request.session.turn_limit }} turns.</h4>
+        {% endif %}
         <div class="rules">
             <h1>Custom Rules:</h1>
             <form action="/define_rules" method="post">
@@ -59,6 +63,9 @@
                 <input type="submit" name= "rules" value= "Generate Rules">
             </form>
         </div>
+        <form action="/reset">
+            <input id="button_yo" type="submit" value="Reset">
+        </form>
     </div>
 </body>
 </html>
