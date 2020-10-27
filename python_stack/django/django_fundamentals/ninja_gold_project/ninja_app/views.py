@@ -22,27 +22,18 @@ def landing(request):
 
 def process(request):
     if request.method == "POST":
-        def check():
-            if request.session['gold'] >= int(request.session['gold_goal']) or request.session['count'] >= int(request.session['turn_limit']):
-                print(request.session['gold'])
-                print(request.session['gold_goal'])
-                return redirect('/game_complete')
         request.session['count'] += 1
         if request.POST['hidden'] == 'farm':
             request.session['gold'] += random.randint(10,20)
-            check()
-            return redirect('/')
         if request.POST['hidden'] == 'cave':
             request.session['gold'] += random.randint(5,10)
-            check()
-            return redirect('/')
         if request.POST['hidden'] == 'house':
             request.session['gold'] += random.randint(2,5)
-            check()
-            return redirect('/')
         if request.POST['hidden'] == 'casino':
             request.session['gold'] += random.randint(-50,50)
-            check()
+        if request.session['gold'] >= int(request.session['gold_goal']) or request.session['count'] >= int(request.session['turn_limit']):
+            return redirect('/game_complete')
+        else:
             return redirect('/')
 
 def rules(request):
