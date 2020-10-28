@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books and Authors</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="add_author">
+            <h1>Add an Author</h1>
+            <form action="/add_author_from_main_page" method="post">
+                {% csrf_token %}
+                <p>Name <input type="text" name="name"></p>
+                <textarea name="notes" cols="30" rows="10" placeholder="Notes"></textarea>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+        <div class="all_authors">
+            <h1>Author List:</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+                {% for author in all_authors %}
+                <tr>
+                    <td>{{author.id}}</td>
+                    <td>{{author.name}}</td>
+                    <td><a href="/author/{{author.id}}">View</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <a href="/">Home</a>
+    </div>
+</body>
+</html>
