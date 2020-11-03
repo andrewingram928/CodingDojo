@@ -1,0 +1,62 @@
+.container {
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid black;
+    margin: auto;
+    background: rgb(174,173,195);
+    background: linear-gradient(180deg, rgba(174,173,195,1) 0%, rgba(148,148,235,1) 100%);
+}
+h1, h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table, th, td {
+    border: 1px solid black;
+}
+table {
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+th {
+    background-color: grey;
+}
+td {
+    background-color: rgba(128, 128, 128, 0.445);
+}
+p {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.input_stuff {
+    display: block;
+    margin: auto;
+    background: rgb(174,173,195);
+    background: linear-gradient(180deg, rgba(174,173,195,1) 0%, rgba(148,148,235,1) 100%);
+}
+.submit_b {
+    margin-top: 20px;
+    margin-left: 230px;
+    margin-bottom: 20px;
+}
+.input_box {
+    margin: auto;
+    border: 1px solid black;
+    width: 50%;
+    background-color: rgba(100, 148, 237, 0.63);
+}
+.messages {
+    color: crimson;
+}
+a {
+    color: black;
+}
+.big_no {
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
