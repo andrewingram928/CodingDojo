@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses and Descriptions!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Course!</h1>
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class ="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <div class="input_box">
+            <form action="/create_course" method="post">
+            {% csrf_token %}
+            <p>Name: </p><input type="text" name='name' class="input_stuff">
+            <br>
+            <p>Description: </p> <textarea name="content" cols="30" rows="10" class="input_stuff"></textarea>
+            <input type="submit" value="Add" class="submit_b">
+            </form>
+        </div>
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Date Added</th>
+                <th>Actions</th>
+            </tr>
+            {% for course in all_courses %}
+            <tr>
+                <td>{{course.name}}</td>
+                <td>{{course.description.content}}</td>
+                <td>{{course.created_at}}</td>
+                <td><a href="/courses/destroy/{{course.id}}">Remove |</a><a href="/courses/comments/{{course.id}}"> Comment</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

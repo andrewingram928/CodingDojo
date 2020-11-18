@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users and Courses</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form action="/courses/users_courses" method="post">
+        {% csrf_token %}
+        <select name="user">
+            {% for user in all_users %}
+                <option value="{{user.id}}">{{user.first_name}} {{user.last_name}}</option>
+            {% endfor %}
+        </select>
+        <select name="course">
+            {% for course in all_courses %}
+                <option value="{{course.id}}">{{course.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add User to Course">
+        </form>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Number of Users</th>
+            </tr>
+            {% for course in all_courses %}
+                <tr>
+                    <th>{{course.id}}</th>
+                    <th>{{course.name}}</th>
+                    <th>{{course.user.count}}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
