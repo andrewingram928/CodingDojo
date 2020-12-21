@@ -33,6 +33,14 @@ class Node {
             return null;
         }
     }
+    contains(value) {
+        if(value) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
   }
 
   var first_node = new Node('Andrew')
@@ -45,4 +53,6 @@ class Node {
   console.log(this_sll)
   this_sll.removeFront()
   this_sll.front()
+  console.log(this_sll.contains('Andrew'))
+  
 
