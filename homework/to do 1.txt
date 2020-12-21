@@ -1,0 +1,80 @@
+REMOVE BLANKS
+
+function arrWord(str){
+  arr = str.split('')
+  for(var i =0; i < arr.length; i++) {
+    if (arr[i] == " ") {
+      for(j = i; j < arr.length; j++){
+        arr[j] = arr[j+1]
+      }
+      arr.pop()
+    } 
+  }
+  return arr.join('')
+}
+x = arrWord(' Pl ayTha tF u nkyM usi c ')
+console.log(x)
+
+
+GET DIGITS
+
+function getDigits(str){
+  var regMatch = /\d/g;
+  var result = str.match(regMatch)
+  return result.join('')
+}
+x = getDigits('0s1a3y5w7h9a2t4?6!8?0')
+console.log(x)
+
+
+ACRONYMS
+
+function acronyms(str) {
+  var regMatch = /\D/g;
+  var newArr = [];
+  var count = 0;
+  var arr = str.split('')
+  for(var i =0; i < arr.length; i++ ){
+    if (arr[i] !== ' ' && count == 0) {
+      newArr.push(arr[i]);
+      count ++;
+    }
+    if(arr[i] == ' ') {
+      count --
+    }
+  }
+  return newArr.join('').toUpperCase()
+}
+x = acronyms("there's no free lunch - gotta pay yer way")
+console.log(x)
+
+
+COUNT NON SPACES
+
+function spaces(str) {
+  var regMatch = /\S/g;
+  var result = str.match(regMatch);
+  return result.length
+}
+x = spaces("Honey pie, you are driving me crazy")
+console.log(x)
+
+
+REMOVE SHORTER STRINGS
+
+function remove(arr,value) {
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i].length < value) {
+      for(var j = i; j < arr.length; j++) {
+        arr[j] = arr[j+1]
+      }
+      i--
+      arr.pop()
+    }
+  }
+  return arr
+}
+x = remove(['Hey', 'Yo', 'To'], 3)
+console.log(x)
+
+
