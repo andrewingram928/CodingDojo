@@ -50,6 +50,13 @@ class Node {
         }
         return count
     }
+    display() {
+        var current = this.head;
+        while(current !== null) {
+            console.log(`Current nodes value is ${current.value}`)
+            current = current.next;
+        }
+    }
   }
 
   var first_node = new Node('Andrew')
@@ -64,5 +71,5 @@ class Node {
   this_sll.front()
   console.log(this_sll.contains('Andrew'))
   console.log(this_sll.length())
-
+  this_sll.display()
 
