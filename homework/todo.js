@@ -41,6 +41,15 @@ class Node {
             return false;
         }
     }
+    length() {
+        var current = this.head;
+        var count = 0;
+        while(current !== null) {
+            current = current.next;
+            count ++;
+        }
+        return count
+    }
   }
 
   var first_node = new Node('Andrew')
@@ -54,5 +63,6 @@ class Node {
   this_sll.removeFront()
   this_sll.front()
   console.log(this_sll.contains('Andrew'))
-  
+  console.log(this_sll.length())
+
 
